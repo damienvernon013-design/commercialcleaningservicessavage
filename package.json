@@ -1,0 +1,9 @@
+{
+  "name": "commercialcleaningservicessavage",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static microsite with a Vercel serverless function for lead submission to the CRM-QM API.",
+  "engines": {
+    "node": ">=18"
+  }
+}
