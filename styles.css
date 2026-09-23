@@ -675,10 +675,16 @@ section { padding: 56px 0; }
   padding-top: 24px;
   border-top: 1px solid #333;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  gap: 6px 16px;
   font-size: 0.78rem;
   color: #555;
 }
+
+.footer-credit { width: 100%; text-align: center; }
+.footer-credit a { color: #789ab8; text-decoration: none; }
+.footer-credit a:hover { color: var(--white); }
 
 /* ── INNER PAGE HERO ── */
 .page-hero {
@@ -733,4 +739,131 @@ section { padding: 56px 0; }
   .footer-inner { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; gap: 8px; }
   .header-top { display: none; }
+}
+
+/* Quote wizard */
+.wiz-progress { margin-bottom: 22px; }
+.wiz-progress-bar {
+  display: block;
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.wiz-progress-fill {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.2s ease;
+}
+.wiz-progress-label {
+  margin-top: 8px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.wiz-fieldset { border: 0; padding: 0; margin: 0 0 18px; }
+.wiz-legend {
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-size: 1.05rem;
+  color: var(--primary);
+  padding: 0;
+  margin-bottom: 6px;
+}
+.wiz-hint { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 14px; }
+
+.wiz-options { display: flex; flex-direction: column; gap: 8px; }
+.wiz-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.wiz-option:hover { border-color: var(--accent); }
+.wiz-option.is-selected {
+  border-color: var(--accent);
+  background: #fdf3ee;
+}
+.wiz-option-input { flex-shrink: 0; }
+.wiz-option-label { font-size: 0.95rem; }
+
+.wiz-slot {
+  border: 1px solid var(--border);
+  padding: 16px;
+  margin-bottom: 14px;
+}
+.wiz-slot-title {
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-size: 0.95rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+.wiz-slot-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.wiz-review-heading {
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 14px;
+}
+.wiz-review-card {
+  border: 1px solid var(--border);
+  padding: 16px;
+  margin-bottom: 14px;
+}
+.wiz-review-card h4 {
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-size: 0.95rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+.wiz-review-list { display: grid; grid-template-columns: 1fr 1.4fr; row-gap: 8px; }
+.wiz-review-list dt { font-size: 0.82rem; color: var(--text-muted); }
+.wiz-review-list dd { font-size: 0.9rem; margin: 0; }
+
+.wiz-terms {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.85rem;
+  margin: 16px 0;
+  cursor: pointer;
+}
+.wiz-terms input { margin-top: 3px; flex-shrink: 0; }
+
+.wiz-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 18px;
+}
+.wiz-nav .btn-primary,
+.wiz-nav .btn-secondary { width: auto; padding: 12px 28px; }
+.btn-secondary {
+  background: var(--white);
+  color: var(--primary);
+  border: 1px solid var(--border);
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.wiz-done h2 {
+  font-family: 'Arial Black', Arial, sans-serif;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+.wiz-done-list { margin: 14px 0; padding-left: 20px; }
+.wiz-done-list li { margin-bottom: 6px; }
+
+@media (max-width: 600px) {
+  .wiz-slot-grid { grid-template-columns: 1fr; }
+  .wiz-review-list { grid-template-columns: 1fr; }
 }

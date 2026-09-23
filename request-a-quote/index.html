@@ -9,31 +9,26 @@
 <link rel="stylesheet" href="/styles.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Savage Commercial Cleaning Services","telephone":"(866) 958-8773","email":"ops@thequotemasters.com","url":"https://www.commercialcleaningservicessavage.com/","openingHours":"Mo-Fr 08:30-17:00"}</script>
 <script src="/scripts.js" defer></script>
+<script src="/assets/js/quote-wizard.js" defer></script>
 </head>
 <body>
 <header class="site-header">
 <div class="header-top"><span class="header-strapline"><strong>22 years</strong> serving Savage and the South Metro &mdash; Mon&ndash;Fri 8:30am&ndash;5:00pm</span><div class="header-contact-quick"><a href="tel:+18669588773">(866) 958-8773</a></div></div>
 <div class="header-main"><a href="/" class="site-logo">Savage Commercial Cleaning Services<span>Serving Savage, MN &amp; Surrounding Areas</span></a><div class="header-phone"><a href="tel:+18669588773">(866) 958-8773</a><small>Mon&ndash;Fri 8:30am&ndash;5:00pm</small></div></div>
-<nav class="site-nav" aria-label="Main navigation"><ul><li><a href="/">Home</a></li><li><a href="/services/">Services</a></li><li><a href="/service-areas/">Service Areas</a></li><li><a href="/pricing/">Pricing</a></li><li><a href="/our-process/">Our Process</a></li><li><a href="/why-choose-us/">Why Choose Us</a></li><li><a href="/insured-and-bonded/">Insured &amp; Bonded</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li><li><a href="/request-a-quote/" class="active">Get a Quote</a></li></ul></nav>
+<nav class="site-nav" aria-label="Main navigation"><ul><li><a href="/">Home</a></li><li><a href="/services/">Services</a></li><li><a href="/service-areas/">Service Areas</a></li><li><a href="/pricing/">Pricing</a></li><li><a href="/our-process/">Our Process</a></li><li><a href="/why-choose-us/">Why Choose Us</a></li><li><a href="/insured-and-bonded/">Insured &amp; Bonded</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/blog/">Blog</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li><li><a href="/request-a-quote/" class="active">Get a Quote</a></li></ul></nav>
 </header><section class="page-hero"><div class="page-hero-inner"><div class="breadcrumb"><a href="/">Home</a><span>/</span>Request a Quote</div><h1>Request a Free Quote &mdash; Savage, MN</h1><p>Fill in your details below. We respond by the next business day with a written quote specific to your facility.</p></div></section><div class="main-content"><section><div class="two-col"><div>
 <div class="quote-card" style="background:var(--white);border:1px solid var(--border);border-top:4px solid var(--accent);padding:32px;">
 <h2 style="font-family:Arial Black,Arial,sans-serif;font-size:1.2rem;color:var(--primary);margin-bottom:16px;">Tell Us About Your Facility</h2>
-<form id="quote-form" method="post">
-<div class="form-field"><label for="q-name">Name</label><input type="text" id="q-name" name="name" autocomplete="name" required></div>
-<div class="form-field"><label for="q-company">Company or Building Name</label><input type="text" id="q-company" name="company"></div>
-<div class="form-field"><label for="q-phone">Phone</label><input type="tel" id="q-phone" name="phone" autocomplete="tel" required></div>
-<div class="form-field"><label for="q-email">Email</label><input type="email" id="q-email" name="email" autocomplete="email"></div>
-<div class="form-field"><label for="q-city">City</label><input type="text" id="q-city" name="city" placeholder="Savage, Prior Lake, Burnsville..."></div>
-<div class="form-field"><label for="q-sqft">Approximate Square Footage</label>
-<select id="q-sqft" name="sqft"><option value="">Select range</option><option>Under 2,000 sq ft</option><option>2,000&ndash;5,000 sq ft</option><option>5,000&ndash;15,000 sq ft</option><option>15,000&ndash;50,000 sq ft</option><option>Over 50,000 sq ft</option></select></div>
-<div class="form-field"><label for="q-service">Primary Service Needed</label>
-<select id="q-service" name="service"><option value="">Select service</option><option>Nightly Commercial Cleaning</option><option>Floor Care &amp; Maintenance</option><option>Restroom Sanitation Program</option><option>Multiple Services</option><option>Not Sure Yet</option></select></div>
-<div class="form-field"><label for="q-notes">Anything else we should know?</label><textarea id="q-notes" name="notes" rows="3" placeholder="Special access requirements, current issues, preferred schedule..."></textarea></div>
-<div class="form-field" style="position:absolute;left:-9999px;" aria-hidden="true"><label for="q-website">Leave this field blank</label><input type="text" id="q-website" name="website" tabindex="-1" autocomplete="off"></div>
-<button type="submit" class="btn-primary">Submit Quote Request</button>
-<p class="form-status" role="status" aria-live="polite"></p>
-<p class="form-note">Next-business-day callback guaranteed. Or call <a href="tel:+18669588773">(866) 958-8773</a> Mon&ndash;Fri 8:30am&ndash;5:00pm.</p>
+<form data-quote-wizard novalidate>
+<div data-wizard-progress class="wiz-progress"></div>
+<div data-wizard-steps class="wiz-steps"></div>
+<p data-wizard-status class="form-status" role="status" aria-live="polite"></p>
+<div data-wizard-nav class="wiz-nav">
+<button type="button" data-wizard-back class="btn-secondary" hidden>Back</button>
+<button type="button" data-wizard-next class="btn-primary">Next</button>
+</div>
 </form>
+<p class="form-note">Next-business-day callback guaranteed. Or call <a href="tel:+18669588773">(866) 958-8773</a> Mon&ndash;Fri 8:30am&ndash;5:00pm.</p>
 </div>
 </div>
 <div class="prose">
@@ -50,7 +45,7 @@
 <div><div class="footer-brand">Savage Commercial Cleaning Services</div><p class="footer-tagline">22 years serving Savage, MN and the South Metro. Insured, bonded, and accountable.</p><div class="footer-contact"><a href="tel:+18669588773">(866) 958-8773</a></div><div class="footer-email"><a href="mailto:ops@thequotemasters.com">ops@thequotemasters.com</a></div><p style="font-size:0.8rem;color:#555;margin-top:8px;">Serving Savage and surrounding areas within 25 miles. Mon&ndash;Fri 8:30am&ndash;5:00pm.</p></div>
 <div class="footer-col"><h4>Services</h4><ul><li><a href="/services/nightly-commercial-cleaning/">Nightly Cleaning</a></li><li><a href="/services/floor-care/">Floor Care</a></li><li><a href="/services/restroom-sanitation/">Restroom Sanitation</a></li><li><a href="/services/">All Services</a></li></ul></div>
 <div class="footer-col"><h4>Service Areas</h4><ul><li><a href="/service-areas/prior-lake/">Prior Lake</a></li><li><a href="/service-areas/burnsville/">Burnsville</a></li><li><a href="/service-areas/shakopee/">Shakopee</a></li><li><a href="/service-areas/bloomington/">Bloomington</a></li><li><a href="/service-areas/">All Areas</a></li></ul></div>
-<div class="footer-col"><h4>Company</h4><ul><li><a href="/about/">About</a></li><li><a href="/insured-and-bonded/">Insured &amp; Bonded</a></li><li><a href="/pricing/">Pricing</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/request-a-quote/">Get a Quote</a></li></ul></div>
+<div class="footer-col"><h4>Company</h4><ul><li><a href="/about/">About</a></li><li><a href="/insured-and-bonded/">Insured &amp; Bonded</a></li><li><a href="/pricing/">Pricing</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/blog/">Blog</a></li><li><a href="/request-a-quote/">Get a Quote</a></li></ul></div>
 </div>
-<div class="footer-bottom"><span>&copy; 2025 Savage Commercial Cleaning Services. All rights reserved.</span><span>22 years in business &mdash; Serving Savage, MN and the South Metro</span></div>
+<div class="footer-bottom"><span>&copy; 2025 Savage Commercial Cleaning Services. All rights reserved.</span><span>22 years in business &mdash; Serving Savage, MN and the South Metro</span> <span class="footer-credit">Built and Maintained by <a href="https://infin8content.com/">Infin8Content</a></span></div>
 </footer></body></html>
